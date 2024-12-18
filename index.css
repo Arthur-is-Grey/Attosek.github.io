@@ -1,0 +1,347 @@
+/* Global Styles */  
+* {  
+    margin: 0;  
+    padding: 0; /* Тодорхойгүй дотоод зайг устгах */  
+}  
+
+body {  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+    line-height: 1.6;  
+    background: linear-gradient(120deg, #f0f4ff, #e0e7ff); /* Light mode background */  
+    color: #333; /* Цагаан текст */  
+}  
+
+body.dark {  
+    background: #222; /* Dark background for the body */  
+    color: #ffffff; /* Light text color for dark mode */  
+}  
+
+/* Section styles */  
+main .tab-home,  
+main .tab-about,  
+main .tab-services,  
+main .tab-contact {  
+    background: #fff; /* Light mode background for sections */  
+    padding: 2rem;  
+    margin-top: 1.5rem;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}  
+
+body.dark .tab-home,  
+body.dark .tab-about,  
+body.dark .tab-services,  
+body.dark .tab-contact {  
+    background: #333; /* Dark mode background for sections */  
+    color: #fff; /* Light text color for dark mode */  
+}  
+
+/* Header styles */  
+header {  
+    background: #1b3c89; /* Header background */  
+    color: #fff; /* Header text color */  
+    text-align: center;  
+    padding: 10px;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+}  
+
+header .logo-container {  
+    display: flex;  
+    align-items: center;  
+    padding-left: 15px;  
+    gap: 5px;  
+}  
+
+header .rounded-image {  
+    width: 40px;  
+    height: 40px;  
+    border-radius: 50%;  
+    border: 2px solid #fff; /* White border for logo */  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  
+    transition: transform 0.3s; /* Animation for hover */  
+}  
+
+header .rounded-image:hover {  
+    transform: scale(1.1); /* Hover effect */  
+}  
+
+header h1 {  
+    font-size: 2rem; /* Header title size */  
+}  
+
+/* Navigation styles */  
+nav ul {  
+    display: flex;  
+    align-items: center;  
+    list-style: none;  
+    padding: 0;  
+    margin: 0;  
+}  
+
+nav ul li {  
+    margin: 0 10px;  
+}  
+
+nav ul li a {  
+    color: #fff; /* Link color */  
+    text-decoration: none; /* Remove underline */  
+    font-size: 1.2rem; /* Font size for links */  
+    font-weight: bold; /* Bold font weight */  
+    padding: 0.5rem 1rem; /* Padding for links */  
+    transition: background 0.3s, transform 0.3s; /* Transition for hover and transform */  
+}  
+
+nav ul li a:hover,  
+nav ul li a:focus {  
+    background: rgba(255, 255, 255, 0.2); /* Hover background */  
+    border-radius: 5px; /* Rounded corners */  
+    transform: translateY(-3px); /* Slight lift on hover */  
+}  
+
+main {  
+    padding: 2rem 1rem; /* Main content padding */  
+    max-width: 10000px; /* Max width of main content */  
+    margin: 0 auto; /* Center-align main content */
+
+}  
+
+/* Tab styles */  
+.tab-home,  
+.tab-about,  
+.tab-services,  
+.tab-contact,
+.tab-map {  
+    display: none; /* Hide by default */  
+    padding: 2rem; /* Padding for tab sections */  
+    margin-top: 1.5rem; /* Space between tab sections */  
+    border-bottom-right-radius: 10px; /* Rounded corners */  
+    border-bottom-left-radius: 10px; /* Rounded corners */  
+    box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.25);  
+    animation: fadeIn 0.5s ease-in-out; /* Fade in animation */  
+} 
+
+
+iframe{
+    width: 1325px;
+
+}
+
+
+
+.tab-home:target,  
+.tab-about:target,  
+.tab-services:target,  
+.tab-contact:target,
+.tab-map:target {  
+    display: block; /* Show selected tab */  
+}  
+
+/* Tab headings */  
+.tab-home h2,  
+.tab-about h2,  
+.tab-services h2,  
+.tab-contact h2, 
+.tab-map h2{  
+    color: #7197ff; /* Heading color */  
+}  
+
+/* Footer styles */  
+footer {  
+    background: #333; /* Footer background */  
+    color: #fff; /* Footer text color */  
+    text-align: center;  
+    padding: 1rem 0; /* Padding for footer */  
+    font-size: 0.9rem; /* Font size for footer */  
+}  
+
+/* Animation */  
+@keyframes fadeIn {  
+    from {  
+        opacity: 0; /* Start fully transparent */  
+        transform: translateY(-20px); /* Start slightly above */  
+    }  
+    to {  
+        opacity: 1; /* End fully opaque */  
+        transform: translateY(0); /* End in place */  
+    }  
+}  
+
+.switch {  
+   
+    display: flex; /* Flexbox layout */  
+    align-items: right; /* Center align */  
+    margin-left: 15px; /* Space on the left */  
+    cursor: pointer; /* Change cursor on hover */  
+}  
+
+.switch input[type="checkbox"] {  
+    display: none; /* Hide the default checkbox */  
+}  
+
+.switch label {  
+    background: #ccc; /* Default switch background */  
+    border-radius: 20px; /* Rounded corners */  
+    padding: 10px 20px; /* Padding for the switch */  
+    position: relative; /* For positioning the switch ball */  
+    transition: background-color 0.3s; /* Smooth transition */  
+}  
+
+.switch label:after {  
+    content: ""; /* Create the toggle */  
+    position: absolute;  
+    top: 50%;  
+    left: 0px;
+    right: 5px;  
+    width: 20px;   
+    height: 20px;  
+    background: white; /* Toggle color */  
+    border-radius: 50%; /* Circle shape */  
+    transform: translateY(-50%); /* Center vertically */  
+    transition: left 0.3s; /* Move toggle left */  
+}  
+
+.switch input[type="checkbox"]:checked + label {  
+    background: #222222; /* Switch background when checked */  
+}  
+
+.switch input[type="checkbox"]:checked + label:after {  
+    left: calc(100% - 20px); /* Move toggle to the right */  
+}
+.language-switch {  
+    margin-left: 20px; /* Space on the left */  
+}  
+
+.language-switch select {  
+    padding: 5px; /* Padding inside select */  
+    border-radius: 4px; /* Rounded corners for select */  
+    border: 1px solid #000000; /* Border */  
+    background: #4982fc; /* Background color for select */  
+    cursor: pointer; /* Change cursor on hover */  
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+.wrapper {
+    align-items: center;
+    display: flex;
+    height: 60vh;
+    justify-content: left;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 400px;
+    justify-content: start;
+  }
+  
+  .card {
+    align-items: flex-end;
+    background-size: cover;
+    border-radius: .75rem;
+    border-radius: 2rem;
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    cursor: pointer;
+    display: flex;
+    margin: 0 10px;
+    overflow: hidden;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    width: 60px;
+  }
+  
+  .card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  
+  .card > .row > .icon {
+    align-items: center;
+    background: #223;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    width: 50px;
+  }
+  
+  .card > .row > .description {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    justify-content: center;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(30px);
+    transition: all .3s ease;
+    transition-delay: .3s;
+    width: 520px;
+  }
+  
+  .description p {
+    color: #ffffff;
+    padding-top: 5px;
+  }
+  
+  .description h4 {
+    text-transform: uppercase;
+  }
+  
+  .tab-services input {
+    display: none;
+  }
+  
+  .tab-services input:checked + label {
+    width: 600px;
+  }
+  
+  .tab-services input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+  
+  .card[for="c1"] {
+    background-image: url('c1 (2).jpg');
+  }
+  
+  .card[for="c2"] {
+    background-image: url('c2.jpg');
+  }
+  
+  .card[for="c3"] {
+    background-image: url('c3.jpg');
+  }
+  
+  .card[for="c4"] {
+    background-image: url('c4.jpg');
+  }
+  
+  .card[for="c5"] {
+    background-image: url('c5.jpg');
+  }
+
+  .card[for="c6"] {
+    background-image: url('c6.jpg');
+  }
+
+  .card[for="c7"] {
+    background-image: url('c7.jpg');
+  }
+
+  .card[for="c8"] {
+    background-image: url('c8.jpg');
+  }
+
+  .card[for="c9"] {
+    background-image: url('c9.jpg');
+  }
+
+  .card[for="c10"] {
+    background-image: url('c10.jpg');
+  }
+ 
